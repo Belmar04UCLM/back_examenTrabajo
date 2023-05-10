@@ -91,29 +91,7 @@ public class Barco {
         else return mostrar;
     }
 
-    public Contenedor crearContenedor()
-    {
-        int id;
-        int peso;
-        String pais;
-        int prioridad;
-        String desc;
-        String envia;
-        String recibe;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce los datos del contenedor\n");
-        id = sc.nextInt();
-        peso = sc.nextInt();
-        pais = sc.next();
-        do{
-            prioridad = sc.nextInt();
-        }while (prioridad<=0 || prioridad>3);
-        desc = sc.next();
-        envia = sc.next();
-        recibe = sc.next();
-        Contenedor contenedor = new Contenedor(id,peso,pais,false,prioridad,desc,envia,recibe);
-        return contenedor;
-    }
+
     public int contenedoresPais (String pais){
         int c, f;
         int cantidad=0;
