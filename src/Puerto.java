@@ -1,3 +1,4 @@
+//Alejandro Belmar Girón
 import java.net.ConnectException;
 
 public class Puerto {
@@ -43,4 +44,9 @@ public class Puerto {
     public void setIndice(int indice) {
         this.indice = indice;
     }
+
+    public String base_puerto(int prioridad){
+        return puerto[0].base_hub(prioridad)+puerto[1].base_hub(prioridad)+puerto[2].base_hub(prioridad);
+    }
+
 }

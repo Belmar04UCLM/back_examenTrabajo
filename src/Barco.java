@@ -1,3 +1,4 @@
+//Alejandro Belmar Girón
 import java.util.Scanner;
 
 public class Barco {
@@ -105,6 +106,26 @@ public class Barco {
             }
         }
         return cantidad;
+    }
+
+    public String base_hub (int prioridad){
+        String cad="";
+        for(int c=0; c<COLUMNAS; c++){
+            if(contenedor[FILAS-1][c]!=null && contenedor[FILAS-1][c].getPrioridad()==prioridad){
+                cad += "\nIdentificador: "+ contenedor[FILAS-1][c].getIdentificador() +
+                       " ,empresa remitente: "+contenedor[FILAS-1][c].getEmpresa_que_envia()+
+                       " ,peso: " +contenedor[FILAS-1][c].getPeso() +
+                       " ,aduanas: ";
+
+                if (contenedor[FILAS-1][c].isAduanas()){
+                    cad += "sí.";
+                }
+                else {
+                    cad += "no.";
+                }
+            }
+        }
+        return cad;
     }
 
 }
